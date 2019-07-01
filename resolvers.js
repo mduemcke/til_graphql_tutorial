@@ -17,21 +17,10 @@ const Query = {
 }
 
 const Employee = {
-    id: (parent) => parent.id,
-    role: (parent) => parent.role,
-    yearsAtCompany: (parent) => parent.yearsAtCompany,
     address: (parent) => address.find(element => element.id == parent.address)
 }
 
-const Address = {
-    id: (parent) => parent.id,
-    street: (parent) => parent.street,
-    area: (parent) => parent.area
-}
-
-
 module.exports = {
     Query,
-    Employee,
-    Address
+    Employee
 }
