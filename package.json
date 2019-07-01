@@ -1,0 +1,19 @@
+{
+  "name": "TIL_GraphQL_tutorial",
+  "author": "Martina Duemcke",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.6.7",
+    "express": "^4.17.1",
+    "graphql": "^14.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
