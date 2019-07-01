@@ -6,7 +6,8 @@ const employees = [
 
 const Query = {
     hallo: () => "Halli und hallo",
-    listEmployees: () => employees
+    listEmployees: () => employees,
+    getByRole: (parent, args) => employees.filter(employee => employee.role === args.role)
 }
 
 const Employee = {
