@@ -1,3 +1,11 @@
 type Query { 
-    hallo: String
+    hallo: String,
+    listEmployees: [Employee]
+}
+
+# Basic types in GraphQL are: String, Int, Float, Boolean, ID
+type Employee {
+    id: ID!,
+    role: String,
+    yearsAtCompany: Int
 }
