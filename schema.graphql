@@ -4,6 +4,10 @@ type Query {
     getByRole(role: String!): [Employee]
 }
 
+type Mutation {
+    insertEmployee(role: String!, yearsAtCompany: Int!): Employee
+}
+
 # Basic types in GraphQL are: String, Int, Float, Boolean, ID
 type Employee {
     id: ID!,

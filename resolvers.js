@@ -16,11 +16,24 @@ const Query = {
     getByRole: (parent, args) => employees.filter(employee => employee.role === args.role)
 }
 
+const Mutation = {
+    insertEmployee: (parent, { role, yearsAtCompany }) => {
+        const newEmployee = {
+	        id: employees.length+1,
+	        role,
+	        yearsAtCompany
+	    }
+        employees.push	(newEmployee)
+        return newEmployee
+    }
+}
+
 const Employee = {
     address: (parent) => address.find(element => element.id == parent.address)
 }
 
 module.exports = {
     Query,
+    Mutation,
     Employee
 }
